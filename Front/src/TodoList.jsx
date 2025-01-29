@@ -82,11 +82,11 @@ function TodoList() {
   
       return  (
     <>
-    <div className=' text-center mx-auto h-20 bg-blue-900 py-4 text-white rounded-md w-xl'>
-
-      <input type="text" placeholder="Enter Your Task" className='border pl-2 w-72 ' value={input} 
+       <h2 className='text-5xl font-bold text-purple-950 my-8 text-center'> To-Do-List </h2>
+    <div className=' text-center mx-auto h-20 bg-gray-500 py-4 rounded-md w-xl'>
+      <input type="text" placeholder="Enter Your Task" className=' pl-2 w-72 bg-white  ' value={input} 
       onChange={(e)=>setInput(e.target.value)} />
-      <button className="ml-16 font-bold text-xl bg-red-600 mt-[8px] rounded px-4" onClick={addTask}>{editingId? "Edit Task":"Add Task"} </button>
+      <button className="ml-16 font-bold text-xl bg-red-600 text-white mt-[8px] rounded px-4" onClick={addTask}>{editingId? "Edit Task":"Add Task"} </button>
     </div>
 
       <ul className='mt-8' >
