@@ -3,6 +3,9 @@ import "dotenv/config";
 import mongoose from "mongoose";
 import cors from "cors";
 
+console.log(process.env.MONGO_USERNAME);
+console.log(process.env.MONGO_PASSWORD);
+
 
 const app = express();
 const port = process.env.PORT
