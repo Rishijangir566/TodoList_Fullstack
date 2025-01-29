@@ -14,7 +14,7 @@ function TodoList() {
 
    async function fetchData(){
     //   const result =await axios.get("http://localhost:3000/api/todos/get")
-      const result =await axios.get("https://todolist-fullstack-hcsy.onrender.com/api/todos/get")
+      const result =await axios.get("https://todolist-fullstack-dten.onrender.com/api/todos/get")
       setTask(result.data)
    }
 
@@ -27,7 +27,7 @@ function TodoList() {
         }
 
         // const response = await axios.put(`http://localhost:3000/api/todos/edit/${idToEdit}`,obj)
-        const response = await axios.put(`https://todolist-fullstack-hcsy.onrender.com/api/todos/edit/${idToEdit}`,obj)
+        const response = await axios.put(`https://todolist-fullstack-dten.onrender.com/api/todos/edit/${idToEdit}`,obj)
         if(response.data.messege==="Todo Updated"){
             fetchData();
             setIdToEdit(null)
@@ -43,7 +43,7 @@ function TodoList() {
             completed:false,
         };
         // const response = await axios.post(`http://localhost:3000/api/todos/add`,obj)
-        const response = await axios.post(`https://todolist-fullstack-hcsy.onrender.com/api/todos/add`,obj)
+        const response = await axios.post(`https://todolist-fullstack-dten.onrender.com/api/todos/add`,obj)
         if(response.status===201 && response.data.messege==="Todo Saved"){
             fetchData()
         }
@@ -62,7 +62,7 @@ function TodoList() {
 
    async function Delete(id){
     //   const response =await axios.delete(`http://localhost:3000/api/todos/delete/${id}`)
-      const response =await axios.delete(`https://todolist-fullstack-hcsy.onrender.com/api/todos/delete/${id}`)
+      const response =await axios.delete(`https://todolist-fullstack-dten.onrender.com/api/todos/delete/${id}`)
       if(response.data.messege==="Todo Deleted")
         fetchData()
     }
@@ -74,7 +74,7 @@ function TodoList() {
     }
 
     // const response = await axios.put(`http://localhost:3000/api/todos/edit/${id}`,updateTask)
-    const response = await axios.put(`https://todolist-fullstack-hcsy.onrender.com/api/todos/edit/${id}`,updateTask)
+    const response = await axios.put(`https://todolist-fullstack-dten.onrender.com/api/todos/edit/${id}`,updateTask)
     if (response.data.message==="Todo Updated"){
         fetchData()
     }
