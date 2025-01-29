@@ -14,8 +14,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // await mongoose.connect("mongodb://127.0.0.1:27017/todolistfullstack"); // use backend and change
-await mongoose.connect("mongodb+srv://rishijangirjr:147Egd4xWkAYPPZa@cluster0.ektln.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+await mongoose.connect(`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@cluster0.ektln.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`);
 
+  // console.log(process.env.MONGO_USERNAME);
 const todoSchema = new mongoose.Schema({
   id: { type: String, required: true },
   title: { type: String, required: true },
